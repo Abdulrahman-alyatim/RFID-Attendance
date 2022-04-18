@@ -32,6 +32,7 @@ try:
             id_attendee = message.rstrip().lstrip()
             name_attendee = ""
             role_attendee = ""
+            ac_number_attendee = ""
 
             i=0
             while True:
@@ -39,11 +40,13 @@ try:
                     identifier = str(ids_sheet.cell_value(i, 0))
                     name = str(ids_sheet.cell_value(i, 1))
                     role = str(ids_sheet.cell_value(i, 2))
+                    ac_number = str(ids_sheet.cell_value(i, 3))
                     if(identifier == id_attendee):
                         name_attendee = name
                         role_attendee = role
+                        ac_number_attendee = ac_number
                         isIdFound = True
-                        print(name+"  "+role)
+                        print(name+"  "+role+"  "+ac_number)
                         break
                 except IndexError:
                     print('Not registered')
@@ -66,6 +69,7 @@ try:
                         attendace_sheet["B"+str(j)] = datetime.now().strftime("%H:%M:%S")
                         attendace_sheet["C"+str(j)] = name_attendee
                         attendace_sheet["D"+str(j)] = role_attendee
+                        attendace_sheet["E"+str(j)] = ac_number_attendee
                         try:
                             attendace_wb.save(filename=attendace_file)
                         except IOError:
