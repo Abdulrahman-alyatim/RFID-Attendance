@@ -9,11 +9,14 @@ You can use an RFID system to open a door. For example, only the person with the
 
 tags attached to the object to be identified, in this example we have a keychain and an electromagnetic card. Each tag has his own identification (UID).
 tags
+
 ![image](https://user-images.githubusercontent.com/45501284/169653632-09eef8ff-ddf4-411b-8ac6-796a3abcb5af.png)
 
 
 two-way radio transmitter-receiver, the reader, that send a signal to the tag and read its response.
+
 ![image](https://user-images.githubusercontent.com/45501284/169653639-063bf0a6-a516-4284-864c-33b4168409a5.png)
+
 --------------------------------------------------------------
 readerSpecifications
 Input voltage: 3.3V
@@ -38,6 +41,7 @@ GND	    GND
 RST	    Digital 9
 3.3V	3.3V
 Caution: You must power this device to 3.3V!
+
 ![image](https://user-images.githubusercontent.com/45501284/169653721-5460f8c3-9a85-4e33-b4e5-a3eb209c2899.png)
 
 ------------------------------------------------------------------
